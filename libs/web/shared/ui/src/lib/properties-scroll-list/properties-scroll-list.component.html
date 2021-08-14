@@ -1,0 +1,55 @@
+<div class="px-3 py-4 relative">
+  <div class="flex justify-between my-4 items-center">
+    <div>
+      <h2 class="text-blue-600 mobile-sm:text-lg md:text-2xl xl:text-3xl font-semibold">
+        {{listTitle}}
+      </h2>
+      <p class="text-sm text-gray-600">{{listSubtitle}}</p>
+    </div>
+    <a [routerLink]="[viewAllLink]" class="rounded-full  px-3 md:px-4 md:py-2 transition-2s md:text-pink-600 bg-gray-300 hover:bg-gray-400">
+      <span class="hidden md:inline ">View All <span class="mif-apps"></span></span>
+      <span class="mobile-sm:inline md:hidden mif-arrow-right mif-2x text-gray-700"></span>
+    </a>
+  </div>
+  <drag-scroll #dragScrollComponent (reachesLeftBound)="onReachesLeftBound($event)"
+               (reachesRightBound)="onReachesRightBound($event)"
+               [drag-scroll-y-disabled]="true" [scroll-x-wheel-enabled]="true"
+               [snap-duration]="800">
+    <div *ngFor="let prop of [1,2,3,4,5,6,8,9,10]" class="property-card w-64 md:w-68 rounded-lg overflow-hidden select-none mobile-sm:mb-3 mr-6
+               shadow-md " drag-scroll-item>
+      <div alt="Featured property building"
+           class="w-64 md:w-68 h-40 bg-cover rounded-t-lg relative" style="background-image: url('assets/images/featured/featured.jpg')">
+        <div class="-ml-10 rotate-45-anti mt-5 overflow-hidden font-semibold shadow-md absolute
+                rounded-tl-lg left-0 top-0 bg-green-gradient text-white pl-12 pr-16 py-1">
+          Featured
+        </div>
+        <div class="absolute rounded-tl-lg right-0 bottom-0 bg-purple-700 font-semibold text-white px-4 py-2">
+          <span class="text-sm">GH¢</span> 200.00 <span class="font-light text-xs text-yellow-500">monthly</span>
+        </div>
+      </div>
+      <div class="px-2 bg-white w-68 rounded-lg lg:px-6 py-4">
+        <div class="font-semibold text-sm lg:leading-tight whitespace-pre-wrap capitalize mb-1">{{prop}} Single room
+          self contain with solar panels
+        </div>
+        <ul class="text-gray-700 text-xs xl:text-sm">
+          <li><span class="mif-location text-teal-500"></span> Living waters, Ejisu - Ashanti Region</li>
+          <li><span class="mif-location-city text-teal-500"></span> Chamber and Hall</li>
+        </ul>
+      </div>
+      <div class="px-6 hidden py-4">
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#photography</span>
+        <span
+          class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#travel</span>
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">#winter</span>
+      </div>
+    </div>
+  </drag-scroll>
+
+  <button (click)="moveLeft()" *ngIf="displayLeftArrow" [nzSize]="'large'" style="position: absolute !important;"
+          class="hidden transition-3s md:block border-0 hover:bg-teal-500 hover:text-white shadow-lg absolute left-0 -mt-48"
+          nz-button nzShape="circle" nzType="default"><i nz-icon nzType="left"></i></button>
+  <button (click)="moveRight()" *ngIf="displayRightArrow" [nzSize]="'large'" style="position: absolute !important;"
+          class="hidden md:block transition-3s border-0 shadow-lg hover:bg-teal-500 hover:text-white absolute right-0 -mt-48"
+          nz-button nzShape="circle" nzType="default"><i nz-icon nzType="right"></i></button>
+</div>
+
