@@ -1,0 +1,31 @@
+<div>
+  <a
+    nz-dropdown
+    [nzDropdownMenu]="locations"
+    class="
+              hidden
+              md:block
+              text-teal-500
+              border
+              rounded
+              bg-gray-100
+              border-teal-600
+              px-3
+              py-2
+            "
+    href="#"
+  >
+    <div class="flex items-center">
+      <i nz-icon class="text-teal-500" nzType="aim"></i>
+      <span class="ml-1">Accra</span>
+    </div>
+  </a>
+  <nz-dropdown-menu #locations="nzDropdownMenu">
+    <ul nz-menu>
+      <li nz-menu-item>Accra</li>
+      <li nz-menu-item>Kumasi</li>
+      <li nz-menu-item>Obuasi</li>
+    </ul>
+  </nz-dropdown-menu>
+
+</div>

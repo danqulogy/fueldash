@@ -1,0 +1,91 @@
+<div class="">
+  <div
+    class="
+      fixed
+      w-full
+      z-50
+      bg-white
+      container
+      mx-auto
+      shadow
+      px-4
+      py-2
+      lg:px-8
+      lg:py-3
+      flex
+      justify-between
+    "
+  >
+    <div>
+      <div class="text-2xl font-bold text-teal-600">
+        <img
+          class="h-5 md:h-5 lg:h-6"
+          src="assets/meetenant-logo-black.png"
+          title="Meetenant"
+        />
+      </div>
+      <div class="text-gray-500 font-medium text-sm text-mdx uppercase py-2">Administrative Console</div>
+    </div>
+
+    <div class="flex items-center space-x-2">
+      <ngx-avatar class='hidden md:block' name="Bernard White"></ngx-avatar>
+      <div>
+        <div class='font-semibold text-md'>Bernard White</div>
+        <div class='text-gray-500 cursor-pointer hover:text-teal-600'>View Profile</div>
+      </div>
+
+      <button
+        (click)="visible = true"
+        class="
+        ml-8
+          btn btn-outline
+          w-12
+          h-12
+          btn-block
+          lg:hidden
+          border-teal-500
+          bg-gray-100
+        "
+      >
+        <i nz-icon nzType="menu" class="text-teal-500" nzTheme="outline"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="flex">
+    <div class="w-72 hidden lg:block fixed bg-white z-40 pt-24 pb-8 px-6 shadow space-y-16 flex flex-col justify-between  h-screen">
+      <metrotenants-admin-menu-items></metrotenants-admin-menu-items>
+
+      <div class='flex flex-row space-x-3 px-2 py-1 items-center'>
+        <ngx-avatar size='38' src="http://daisyui.com/tailwind-css-component-profile-1@40w.png"></ngx-avatar>
+        <div>
+          <div class='font-semibold text-md'>Bernard White</div>
+          <div class='text-gray-500 cursor-pointer hover:text-teal-600'>View Profile</div>
+        </div>
+        <button nz-button nzType="text" class='h-10 w-10'  nzShape="circle"><i nz-icon class='text-xl text-teal-500' nzType="setting"></i></button>
+
+      </div>
+
+    </div>
+    <div class="bg-teal-50 w-full  lg:ml-72 py-24">
+      <div class='px-4 '>
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+
+  <nz-drawer
+    #menu
+    [nzClosable]="false"
+    [nzVisible]="visible"
+    nzPlacement="right"
+    nzTitle="Menu"
+    (nzOnClose)="hideMenu()"
+  >
+    <ng-container *nzDrawerContent>
+      <div>
+        <metrotenants-admin-menu-items></metrotenants-admin-menu-items>
+      </div>
+    </ng-container>
+  </nz-drawer>
+</div>
