@@ -182,6 +182,156 @@
           }
         }
       }
+    },
+    "web-core": {
+      "projectType": "library",
+      "root": "libs/web/core",
+      "sourceRoot": "libs/web/core/src",
+      "prefix": "fueldash",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/web/core"],
+          "options": {
+            "jestConfig": "libs/web/core/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/web/core/src/**/*.ts",
+              "libs/web/core/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "web-portal-dashboard": {
+      "projectType": "library",
+      "root": "libs/web/portal/dashboard",
+      "sourceRoot": "libs/web/portal/dashboard/src",
+      "prefix": "fueldash",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/web/portal/dashboard"],
+          "options": {
+            "jestConfig": "libs/web/portal/dashboard/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/web/portal/dashboard/src/**/*.ts",
+              "libs/web/portal/dashboard/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "web-shared-core": {
+      "projectType": "library",
+      "root": "libs/web/shared/core",
+      "sourceRoot": "libs/web/shared/core/src",
+      "prefix": "fueldash",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/web/shared/core"],
+          "options": {
+            "jestConfig": "libs/web/shared/core/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/web/shared/core/src/**/*.ts",
+              "libs/web/shared/core/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "web-shared-exceptions": {
+      "projectType": "library",
+      "root": "libs/web/shared/exceptions",
+      "sourceRoot": "libs/web/shared/exceptions/src",
+      "prefix": "fueldash",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/web/shared/exceptions"],
+          "options": {
+            "jestConfig": "libs/web/shared/exceptions/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/web/shared/exceptions/src/**/*.ts",
+              "libs/web/shared/exceptions/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "web-shared-layouts": {
+      "projectType": "library",
+      "root": "libs/web/shared/layouts",
+      "sourceRoot": "libs/web/shared/layouts/src",
+      "prefix": "fueldash",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/web/shared/layouts"],
+          "options": {
+            "jestConfig": "libs/web/shared/layouts/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/web/shared/layouts/src/**/*.ts",
+              "libs/web/shared/layouts/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "web-shared-ui": {
+      "projectType": "library",
+      "root": "libs/web/shared/ui",
+      "sourceRoot": "libs/web/shared/ui/src",
+      "prefix": "fueldash",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/web/shared/ui"],
+          "options": {
+            "jestConfig": "libs/web/shared/ui/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/web/shared/ui/src/**/*.ts",
+              "libs/web/shared/ui/src/**/*.html"
+            ]
+          }
+        }
+      }
     }
   },
   "cli": {

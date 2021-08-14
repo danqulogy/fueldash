@@ -15,7 +15,17 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@fueldash/api-interfaces": ["libs/api-interfaces/src/index.ts"]
+      "@fueldash/api-interfaces": ["libs/api-interfaces/src/index.ts"],
+      "@fueldash/web/core": ["libs/web/core/src/index.ts"],
+      "@fueldash/web/portal/dashboard": [
+        "libs/web/portal/dashboard/src/index.ts"
+      ],
+      "@fueldash/web/shared/core": ["libs/web/shared/core/src/index.ts"],
+      "@fueldash/web/shared/exceptions": [
+        "libs/web/shared/exceptions/src/index.ts"
+      ],
+      "@fueldash/web/shared/layouts": ["libs/web/shared/layouts/src/index.ts"],
+      "@fueldash/web/shared/ui": ["libs/web/shared/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
