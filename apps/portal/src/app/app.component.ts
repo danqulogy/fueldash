@@ -7,10 +7,9 @@ import {
 } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { filter, map, mergeMap } from 'rxjs/operators';
-import * as Feather from 'feather-icons';
 
 @Component({
-  selector: 'metrotenants-root',
+  selector: 'fueldash-root',
   template: `
     <div class="bg-yellow-600x">
       <ng-progress></ng-progress>
@@ -27,7 +26,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   ) {}
 
   ngAfterViewInit(): void {
-    Feather.replace();
+    console.log('ng after view init...')
   }
 
   ngOnInit() {

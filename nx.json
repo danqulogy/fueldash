@@ -41,6 +41,9 @@
       "tags": [],
       "implicitDependencies": ["portal"]
     },
+    "shared-dtos": {
+      "tags": []
+    },
     "web-core": {
       "tags": []
     },

@@ -1,10 +1,8 @@
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
-import { WebSharedExceptionsModule } from '@metrotenants/web/shared/exceptions';
-import { MainLayoutComponent, WebSharedLayoutsModule } from '@metrotenants/web/shared/layouts';
-import { WebMeetenantHomeModule } from '@metrotenants/web/meetenant/home';
-import { WebAdminDashboardModule } from '@metrotenants/web/admin/dashboard';
-import { WebAdminPropertiesModule } from '@metrotenants/web/admin/properties';
+import { WebSharedExceptionsModule } from '@fueldash/web/shared/exceptions';
+import { MainLayoutComponent, WebSharedLayoutsModule } from '@fueldash/web/shared/layouts';
+import { WebPortalDashboardModule } from '@fueldash/web/portal/dashboard';
 
 const COMPONENTS = [];
 
@@ -28,8 +26,7 @@ const routes:Routes = [
     }),
     WebSharedExceptionsModule,
     WebSharedLayoutsModule,
-    WebAdminDashboardModule,
-    WebAdminPropertiesModule
+    WebPortalDashboardModule
   ],
   // providers: [RoutesPreloader],
   // declarations: [...COMPONENTS],

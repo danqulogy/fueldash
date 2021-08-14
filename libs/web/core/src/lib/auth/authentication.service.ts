@@ -6,7 +6,7 @@ import { NgxRolesService } from 'ngx-permissions';
 import { BehaviorSubject, Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { NzNotificationService } from 'ng-zorro-antd/notification';
-import { AuthResponse, IAuthCredentials, UserInListDto } from '@metrotenants/shared/dtos';
+import { AuthResponse, IAuthCredentials, UserInListDto } from '@fueldash/shared/dtos';
 import { AuthStoreKeys } from '../enum/authStoreKeys';
 
 export interface AccessData {

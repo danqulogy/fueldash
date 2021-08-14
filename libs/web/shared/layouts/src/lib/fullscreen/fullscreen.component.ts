@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'metrotenants-fullscreen',
+  selector: 'fueldash-fullscreen',
   template: '<router-outlet></router-outlet>'
 })
 export class FullscreenComponent implements OnInit {

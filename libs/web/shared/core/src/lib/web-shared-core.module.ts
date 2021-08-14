@@ -25,9 +25,6 @@ import { NzDrawerModule } from 'ng-zorro-antd/drawer';
 import { DigitOnlyModule } from '@uiowa/digit-only';
 import { NzToolTipModule } from 'ng-zorro-antd/tooltip';
 import { NzRadioModule } from 'ng-zorro-antd/radio';
-import { SimpleSearchFormComponent } from './components/simple-search-form/simple-search-form.component';
-import { FeaturedPropertiesSliderComponent } from './components/featured-properties-slider/featured-properties-slider.component';
-import { DragScrollModule } from 'ngx-drag-scroll';
 import {FaIconLibrary, FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {
   faArrowAltCircleRight,
@@ -46,7 +43,6 @@ import {
   faVideo
 } from '@fortawesome/free-solid-svg-icons';
 import { NzSwitchModule } from 'ng-zorro-antd/switch';
-import { UiSwitchModule } from 'ngx-ui-switch';
 import { NzCascaderModule } from 'ng-zorro-antd/cascader';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzTableModule } from 'ng-zorro-antd/table';
@@ -90,9 +86,7 @@ const THIRDMODULES = [
   AvatarModule,
   NgHeroiconsModule,
   DigitOnlyModule,
-  DragScrollModule,
   FontAwesomeModule,
-  UiSwitchModule
 
   // PerfectScrollbarModule,
   // NgbModule,
@@ -104,8 +98,6 @@ const THIRDMODULES = [
 ];
 
 const COMPONENTS = [
-  SimpleSearchFormComponent,
-  FeaturedPropertiesSliderComponent,
   // FilterTextboxComponent,
   // LayoutPublicComponent,
   // TopbarUserMenuComponent,
@@ -114,15 +106,9 @@ const COMPONENTS = [
 ];
 
 @NgModule({
-  imports: [...MODULES, ...ANT_MODULES, ...THIRDMODULES,  UiSwitchModule.forRoot({
-    size: 'small',
-    color: '#008080',
-    switchColor: '#FFFFFF',
-    defaultBgColor: '#8B4950',
-    defaultBoColor : '#FFFFFF',
-  })],
-  exports: [...MODULES, ...ANT_MODULES, ...THIRDMODULES, ...COMPONENTS, UiSwitchModule],
-  declarations: [...COMPONENTS],
+  imports: [...MODULES, ...ANT_MODULES, ...THIRDMODULES],
+  exports: [...MODULES, ...ANT_MODULES, ...THIRDMODULES],
+  declarations: [],
 })
 export class WebSharedCoreModule {
   constructor(library: FaIconLibrary) {

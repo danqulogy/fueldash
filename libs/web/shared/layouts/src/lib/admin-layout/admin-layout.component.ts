@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { UiService } from '@metrotenants/web/core';
+import { UiService } from '@fueldash/web/core';
 
 @Component({
-  selector: 'metrotenants-admin-layout',
+  selector: 'fueldash-admin-layout',
   templateUrl: './admin-layout.component.html',
   styleUrls: ['./admin-layout.component.scss']
 })

@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@fueldash/api-interfaces": ["libs/api-interfaces/src/index.ts"],
+      "@fueldash/shared/dtos": ["libs/shared/dtos/src/index.ts"],
       "@fueldash/web/core": ["libs/web/core/src/index.ts"],
       "@fueldash/web/portal/dashboard": [
         "libs/web/portal/dashboard/src/index.ts"
